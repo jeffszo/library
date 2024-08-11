@@ -1,0 +1,13 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  user: jeferson
+  password: corrida28
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: localhost
+
+
+development:
+  <<: *default
+  database: library_development
